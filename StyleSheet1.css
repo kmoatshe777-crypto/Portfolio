@@ -221,7 +221,12 @@ section {
     animation: fadeIn 1.2s ease;
     scroll-margin-top: 80px;
 }
-
+.about img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 /* REUSABLE ANIMATION */
 .animate-fade {
     animation: fadeIn 1.2s ease;

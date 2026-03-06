@@ -83,6 +83,21 @@ body::before {
             outline: none;
         }
 
+/* BURGER MENU */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
 /* HEADER SECTION */
 header {
     width: 100%;
@@ -283,6 +298,27 @@ footer {
 
 /* RESPONSIVE TWEAKS */
 @media (max-width: 768px) {
+
+    .nav-links{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(10,10,30,0.95);
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    display: none;
+}
+
+.nav-links.active{
+    display: flex;
+}
+
+.burger{
+    display: flex;
+}
     .hero {
         padding: var(--space-md);
     }

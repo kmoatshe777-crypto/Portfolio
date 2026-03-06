@@ -205,6 +205,29 @@ navLinks.classList.remove("active");
 });
 });
 
+const skillSection = document.querySelector("#skills");
+const skillBars = document.querySelectorAll(".skill-fill");
+
+window.addEventListener("scroll", () => {
+
+const sectionPos = skillSection.getBoundingClientRect().top;
+const screenPos = window.innerHeight / 1.3;
+
+if(sectionPos < screenPos){
+
+skillBars.forEach(bar => {
+bar.style.width = bar.classList.contains("html") ? "90%" :
+bar.classList.contains("css") ? "85%" :
+bar.classList.contains("js") ? "70%" :
+bar.classList.contains("php") ? "75%" :
+bar.classList.contains("mysql") ? "70%" :
+bar.classList.contains("git") ? "65%" : "0%";
+});
+
+}
+
+});
+
 </script>
 
 </body>

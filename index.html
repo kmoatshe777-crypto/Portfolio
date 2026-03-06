@@ -82,5 +82,30 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="particles.js"></script>
 
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+<script>
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("nav-links");
+const links = document.querySelectorAll(".nav-links a");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+</script>
+
 </body>
 </html>

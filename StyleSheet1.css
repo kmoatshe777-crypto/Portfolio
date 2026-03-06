@@ -414,7 +414,7 @@ padding: var(--space-md);
 /* Image */
 .about-image {
   width: 160px;          /* fixed size */
-  height: 160px;         /* keep it square */
+  height: 155px;         /* keep it square */
   object-fit: cover;     /* crop instead of stretching */
   border-radius: 50%;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);

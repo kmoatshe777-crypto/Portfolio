@@ -399,15 +399,30 @@ padding: var(--space-md);
 }
 
 
+/* About Section */
 #about {
-    max-width: 900px;
-    margin: var(--space-md) auto;
-    padding: var(--space-md);
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-    backdrop-filter: blur(6px);
-    animation: slideLeft 1.2s ease;
+  max-width: 900px;
+  margin: var(--space-md) auto;
+  padding: var(--space-md);
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  animation: slideLeft 1.2s ease;
+  overflow: hidden; /* ensures child elements don’t break borders */
 }
+
+/* Image */
+.about-image {
+  width: 160px;          /* fixed size */
+  height: 160px;         /* keep it square */
+  object-fit: cover;     /* crop instead of stretching */
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;        /* prevents image from squashing text */
+  margin: 0 auto;        /* centers image */
+}
+
 
 /* Heading */
 #about h2 {
@@ -446,16 +461,6 @@ padding: var(--space-md);
     text-align: center;
     gap: var(--space-md);
 }
-
-/* Image */
-.about-image {
-    width: 160px;
-    border-radius: 50%;
-    
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-transition: transform 0.3s ease;
-}
-
 
 
 /* REDUCED MOTION SUPPORT */

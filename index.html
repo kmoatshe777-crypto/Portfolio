@@ -223,31 +223,45 @@ links.forEach(link => {
 // SKILLS ANIMATION
 const skillSection = document.querySelector("#skills");
 const skillBars = document.querySelectorAll(".skill-fill");
+
 let skillsAnimated = false;
 
-window.addEventListener("scroll", () => {
+function animateSkills() {
 
-    const sectionPos = skillSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight * 0.8;
+if (skillsAnimated) return;
 
-    if(sectionPos < screenPos && !skillsAnimated){
+const sectionPosition = skillSection.getBoundingClientRect().top;
+const triggerPoint = window.innerHeight * 0.8;
 
-        skillBars.forEach(bar => {
+if (sectionPosition < triggerPoint) {
 
-            if(bar.classList.contains("html")) bar.style.width = "90%";
-            if(bar.classList.contains("css")) bar.style.width = "85%";
-            if(bar.classList.contains("js")) bar.style.width = "70%";
-            if(bar.classList.contains("php")) bar.style.width = "75%";
-            if(bar.classList.contains("mysql")) bar.style.width = "70%";
-            if(bar.classList.contains("git")) bar.style.width = "65%";
+skillBars.forEach(bar => {
 
-        });
+const level = bar.getAttribute("data-level");
+const percentText = bar.querySelector(".skill-percent");
 
-        skillsAnimated = true;
+let current = 0;
 
-    }
+const interval = setInterval(() => {
+
+if (current >= level) {
+clearInterval(interval);
+bar.classList.add("filled");
+} else {
+current++;
+bar.style.width = current + "%";
+percentText.textContent = current + "%";
+}
+
+}, 10);
 
 });
+
+skillsAnimated = true;
+}
+}
+
+window.addEventListener("scroll", animateSkills);
 
 </script>
 

@@ -452,8 +452,13 @@ footer {
 color: #00bfff;
 text-decoration: none;
 font-weight: bold;
+display: inline-block;
+    margin-top: 4px;
 }
 
 #contact a:hover {
 text-decoration: underline;
+}
+#contact p {
+    margin: 10px 0;
 }

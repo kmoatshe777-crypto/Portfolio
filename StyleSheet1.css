@@ -432,6 +432,59 @@ background:#01040d;
 margin-top:var(--space-lg);
 
 }
+/* ================= SKILLS ================= */
+
+#skills h2 {
+text-align: center;
+margin-bottom: var(--space-md);
+color: #00bfff;
+}
+
+.skills-container {
+max-width: 700px;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.skill span {
+font-weight: bold;
+}
+
+.skill-bar {
+width: 100%;
+height: 14px;
+background: rgba(255,255,255,0.1);
+border-radius: 20px;
+overflow: hidden;
+}
+
+.skill-fill {
+height: 100%;
+width: 0;
+background: linear-gradient(90deg,#00bfff,#ff6600);
+border-radius: 20px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+transition: width 1.5s ease;
+}
+
+.skill-percent {
+font-size: 12px;
+font-weight: bold;
+padding-right: 8px;
+color: white;
+opacity: 0;
+transition: opacity 0.5s ease;
+}
+
+.skill-fill.filled .skill-percent {
+opacity: 1;
+}
+
+
 
 /* ================= ANIMATIONS ================= */
 

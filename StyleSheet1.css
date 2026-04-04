@@ -208,15 +208,21 @@ margin-bottom:var(--space-md);
 
 /* ================= HERO BUTTONS ================= */
 
-.hero-buttons{
-
-display:flex;
-
+..hero-buttons{
+display: flex;
+flex-direction: row;     /* keep buttons horizontal */
+justify-content: center; /* center them */
+align-items: center;
 gap: 16px;
+flex-wrap: nowrap;       /* prevent stacking */
+}
 
-flex-wrap:wrap;
-flex-direction: column;
-
+/* button size consistency */
+.hero-buttons a,
+.hero-buttons button{
+min-width: 160px;
+padding: 14px 24px;
+text-align: center;
 }
 
 /* BUTTON BASE */

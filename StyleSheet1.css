@@ -212,9 +212,10 @@ margin-bottom:var(--space-md);
 
 display:flex;
 
-gap:var(--space-sm);
+gap: 16px;
 
 flex-wrap:wrap;
+flex-direction: column;
 
 }
 
@@ -223,7 +224,7 @@ flex-wrap:wrap;
 .hero-buttons a,
 .hero-buttons button{
 
-display:inline-flex;
+display:flex;
 
 align-items:center;
 justify-content:center;
@@ -262,7 +263,7 @@ box-shadow:0 6px 18px rgba(0,191,255,0.35);
 transform:translateY(-3px);
 
 box-shadow:0 10px 25px rgba(0,191,255,0.5);
-
+width:220px
 }
 
 /* PROJECT BUTTON */

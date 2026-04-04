@@ -1,7 +1,7 @@
 
 /* RESET */
 
-{
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -151,36 +151,33 @@ text-align: left;
 
 /* BUTTONS */
 
-.hero-buttons {
-display: flex;
-gap: var(--space-sm);
-flex-wrap: wrap;
-}
-
-.hero-buttons button {
-padding: var(--space-sm) var(--space-md);
-border: none;
-border-radius: 8px;
-font-weight: bold;
-cursor: pointer;
-color: #fff;
-transition: background 0.3s ease, transform 0.2s ease;
-}
 .hero-buttons{
-display: flex;
-flex-direction: row;     /* keep buttons horizontal */
-justify-content: center; /* center them */
-align-items: center;
-gap: 16px;
-flex-wrap: nowrap;       /* prevent stacking */
+display:flex;
+justify-content:center;
+align-items:center;
+gap:16px;
+flex-wrap:wrap;
 }
-
-/* button size consistency */
 .hero-buttons a,
 .hero-buttons button{
-min-width: 160px;
-padding: 14px 24px;
-text-align: center;
+
+padding:14px 26px;
+border:none;
+border-radius:10px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+color:#fff;
+text-decoration:none;
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+transition:background 0.3s ease, transform 0.2s ease;
+
 }
 
 .hero-buttons button:focus-visible {

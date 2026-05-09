@@ -348,7 +348,7 @@ opacity:1;
 
 /* ================= PROJECTS ================= */
 
-.project{
+.project-card{
 padding:var(--space-sm);
 background:rgba(0,0,0,0.6);
 border-radius:10px;

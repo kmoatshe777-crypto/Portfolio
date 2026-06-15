@@ -348,28 +348,28 @@ opacity:1;
 
 /* ================= PROJECTS ================= */
 
-.project-card{
-padding:var(--space-sm);
-background:rgba(0,0,0,0.6);
-border-radius:10px;
-margin-bottom:var(--space-sm);
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,191,255,0.2);
-}
 /* PROJECT CARD */
 .project-card{
     display:flex;
     align-items:center;
     gap:20px;
+
+    padding:var(--space-sm);
+    margin-top:20px;
+    margin-bottom:var(--space-sm);
+
+    background:rgba(0,0,0,0.6);
     backdrop-filter:blur(10px);
 
     border:1px solid rgba(255,255,255,0.1);
+    border-radius:10px;
 
-    margin-top:20px;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,191,255,0.2);
 }
 
 /* LOGO */
@@ -377,7 +377,6 @@ box-shadow:0 10px 25px rgba(0,191,255,0.2);
     width:120px;
     height:120px;
     object-fit:cover;
-
     border-radius:20px;
 }
 
@@ -398,15 +397,15 @@ box-shadow:0 10px 25px rgba(0,191,255,0.2);
 /* BUTTON */
 .project-btn{
     display:inline-block;
-
     padding:10px 20px;
-    border-radius:10px;
 
-    text-decoration:none;
     background:#3b82f6;
     color:white;
 
-    transition:0.3s ease;
+    text-decoration:none;
+    border-radius:10px;
+
+    transition:all 0.3s ease;
 }
 
 .project-btn:hover{
@@ -414,8 +413,7 @@ box-shadow:0 10px 25px rgba(0,191,255,0.2);
 }
 
 /* MOBILE */
-@media(max-width:768px){
-
+@media (max-width:768px){
     .project-card{
         flex-direction:column;
         text-align:center;
